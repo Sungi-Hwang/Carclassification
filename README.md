@@ -83,7 +83,7 @@
 
 ## 6. 사용 방법 요약
 
-1. Google Drive에 `open.zip`을 업로드합니다.
+1. Google Drive에 `open.zip`을 업로드합니다.(https://dacon.io/competitions/official/236493/data)
 2. Colab 환경에서 전체 코드를 순차적으로 실행합니다.
 3. 학습된 모델은 자동 저장되며, 제출 파일도 `/team_models/`에 생성됩니다.
 4. 필요 시, Stage 2 학습으로 성능을 개선할 수 있습니다.
