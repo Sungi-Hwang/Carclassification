@@ -1,3 +1,34 @@
+# Car Image Classification Pipeline
+
+이 프로젝트는 자동차 이미지를 분류하기 위한 **EfficientNet 기반의 이미지 분류 파이프라인**입니다.  
+전체 과정은 데이터 준비부터 학습, 추론, 그리고 Knowledge Distillation 기반의 성능 개선 단계까지 포함되어 있습니다.
+
+---
+
+## 1. 프로젝트 목적
+
+- 자동차 이미지 데이터를 분류하는 모델을 학습합니다.
+- 이미지뿐 아니라 부가 정보를 활용해 정확도를 높입니다.
+- EfficientNet-B5를 백본으로 사용하고, 이미지의 평균 색상(`color mean`)을 메타 정보로 추가합니다.
+- 5-Fold 앙상블과 Knowledge Distillation 기반 Student 모델 학습까지 수행합니다.
+
+---
+
+## 2. 전체 구성 요약
+
+| 단계       | 내용                                                             |
+|------------|------------------------------------------------------------------|
+| 데이터 준비 | Google Drive의 zip 파일 복사 및 압축 해제                        |
+| 전처리     | 이미지에서 클래스명 추출, 파일 리스트 생성, transform 정의       |
+| 모델 정의  | EfficientNet-B5 + Meta feature (`color_mean`) 처리 모델         |
+| 학습       | 5-Fold Cross Validation 기반 학습                                 |
+| 추론       | Fold별 모델 예측 결과 앙상블 (`softmax` 평균)                   |
+| KD 학습    | Teacher 모델의 soft label을 사용하여 Student 모델 학습           |
+
+---
+
+## 3. 파일 구조 설명
+
 
 ---
 
